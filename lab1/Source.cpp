@@ -59,6 +59,8 @@ int main()
 	HANDLE worker;
 	DWORD IDworker;
 	worker = CreateThread(NULL, 0, Add, (void*)temp, 0, &IDworker);
+	if (worker == NULL)
+		return GetLastError();
 	std::cout << "Suspend worker" << std::endl;
 	SuspendThread(worker);
 	for (int i = 0; i < size; i++)
