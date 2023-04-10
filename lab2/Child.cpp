@@ -44,4 +44,5 @@ int main(int arg, char* argv[]) {
 			std::cout << mas[j] << " ";
 		}
 	}
+	std::cin.get();
 }
