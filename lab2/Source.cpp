@@ -46,6 +46,7 @@ int main() {
 		std::cout << "New process has created";
 	}
 	SetPriorityClass(piApp.hProcess, HIGH_PRIORITY_CLASS);
+	Sleep(3000);
 	TerminateProcess(piApp.hProcess, 0);
 	CloseHandle(piApp.hThread);
 	CloseHandle(piApp.hProcess);
